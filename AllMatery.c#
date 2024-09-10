@@ -1,0 +1,278 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+// Mengimpor namespace System yang menyediakan fungsi dasar, seperti input/output, termasuk kelas Console
+using System;
+
+// Namespace digunakan untuk mengelompokkan class agar tidak terjadi bentrokan nama.
+namespace HelloWorld{
+  
+  // ========================== 1 - INTRO  ========================
+  
+  // Mendeklarasikan sebuah kelas bernama Program
+  class Program{
+    
+    // method yang akan dijalankan pertama kali ketika program dimulai. 
+    static void Main(string[] args){
+        
+        // Baris ini mencetak teks "Hello World!" ke konsol. 
+        // Console.WriteLine untuk menampilkan output ke layar.
+      Console.WriteLine("Hello World!");    
+      
+      // Output 6
+      Console.WriteLine(3 + 3);
+      
+    // ========================== 2 - TIPE VARIABEL  ========================
+    
+    // Tipe string digunakan untuk menyimpan variabel berupa karakter 
+    string name = "John";
+    Console.WriteLine(name);  
+    
+    // Tipe string digunakan untuk menyimpan variabel berupa angka
+    int myNum = 15;
+    Console.WriteLine(myNum);
+    
+    // Tipe variabel lain
+    int myNum1 = 5;
+    double myDoubleNum = 5.99D; // Tipe string digunakan untuk menyimpan variabel berupa 2 angka belakang koma
+    char myLetter = 'D';
+    bool myBool = true;
+    string myText = "Hello";
+    
+    // ========================== 3 - Display Variabel  ========================
+    
+    // Tipe ini dideklarasikan untuk menyimpan teks yang akan dieksekusi
+    string name_1 = "John";
+    
+    // Operator ini akan melakukan penggabungan nilai string yang sudah ada
+    // Output : Hello John
+    Console.WriteLine("Hello " + name_1);
+    
+    // Apabila terdapat 2 string ini maka dapat dilakukan penggabungan seperti ini
+    // Output : John Doe
+    string firstName = "John ";
+    string lastName = "Doe";
+    string fullName = firstName + lastName;
+    Console.WriteLine(fullName);
+    
+    // Ketika tipe data berupa angka maka kurang lebih sama seperti string
+    // output : 11
+    int x = 5;
+    int y = 6;
+    Console.WriteLine(x + y); // Print the value of x + y
+    
+    // ========================== 4 - Deklarasi Banyak Variabel  ========================
+    
+    // Ketika ingin menjumlahkan dengan tipe angka yang banyak maka lakukan hal yang sama dengan sebelumnya maka, variabel ini akan mengirim kepada tipe data yang akan dieksekusi
+    // Output : 61
+    int x1 = 5, y1 = 6, z1 = 50;
+    Console.WriteLine(x1 + y1 + z1);
+    
+    int x2, y2, z2;
+    // Kalau seperti ini maka semua nilai variabel adalah 50
+    // x2 = 50, y2 = 50, dan z2 = 50
+    // Output : 150
+    x2 = y2 = z2 = 50;
+    Console.WriteLine(x2 + y2 + z2);
+    
+    
+    // ========================== 5 - Tipe data  ========================
+    int myNum2 = 5;               // Integer (whole number)
+    double myDoubleNum2 = 5.99D;  // Floating point number
+    char myLetter2 = 'D';         // Character
+    bool myBool2 = true;          // Boolean
+    string myText2 = "Hello";     // String
+    
+    // Variabel myNum bertipe data long, yang digunakan untuk menyimpan bilangan bulat besar (64-bit)
+    // Output : 15000000000
+    long myNum3 = 15000000000L;
+    Console.WriteLine(myNum3);
+    
+    // Variabel myNum4 bertipe data float, yang digunakan untuk menyimpan angka pecahan (32-bit floating point).
+    // Output : 5.75
+    float myNum4 = 5.75F;
+    Console.WriteLine(myNum4);
+    
+    // bertipe data double, yang digunakan untuk menyimpan angka desimal (64-bit floating point) dengan presisi yang lebih tinggi dibandingkan float.
+    // Output : 19.99
+    double myNum5 = 19.99D;
+    Console.WriteLine(myNum5);
+    
+    // ========================== 7 - Casting  ========================
+    // Casting dalam pemrograman adalah proses mengonversi suatu tipe data ke tipe data lain.
+    
+    // Misalnya
+    int myInt5 = 10;
+    double myDouble5 = 5.25;
+    bool myBool5 = true;
+    
+    // convert int to string
+    Console.WriteLine(Convert.ToString(myInt5));    
+    
+    // convert int to double
+    Console.WriteLine(Convert.ToDouble(myInt5));    
+    
+    // convert double to int
+    Console.WriteLine(Convert.ToInt32(myDouble5));  
+    
+    // convert bool to string
+    Console.WriteLine(Convert.ToString(myBool5));   
+    
+    // ========================== 8 - Input  ========================
+    
+    // Tipe untuk memulai cetak input
+    Console.WriteLine("Enter username:");
+    
+    // membuat tipe string sebagai input berupa karakter
+    string userName1 = Console.ReadLine();
+    
+    Console.WriteLine("Username is: " + userName1);
+    
+    // ========================== 9 - Bilangan Operator  ========================
+    
+    // Deklarasi variabel bilangan
+        int num10 = 10;
+        int num20 = 5;
+
+        // Operator penjumlahan (+)
+        int sum = num10 + num20;
+        Console.WriteLine("Hasil penjumlahan: " + sum);  // Output: 15
+
+        // Operator pengurangan (-)
+        int difference = num10 - num20;
+        Console.WriteLine("Hasil pengurangan: " + difference);  // Output: 5
+
+        // Operator perkalian (*)
+        int product = num10 * num20;
+        Console.WriteLine("Hasil perkalian: " + product);  // Output: 50
+
+        // Operator pembagian (/)
+        int quotient = num10 / num20;
+        Console.WriteLine("Hasil pembagian: " + quotient);  // Output: 2
+
+        // Operator modulus (%), untuk mendapatkan sisa bagi
+        int remainder = num10 % num20;
+        Console.WriteLine("Sisa pembagian (modulus): " + remainder);  // Output: 0
+        
+        // ========================== 10 - Kondisi  ========================
+        // Konsep if-else dalam pemrograman adalah salah satu cara untuk membuat keputusan dalam sebuah program. Dengan menggunakan if-else, program dapat memilih jalur eksekusi berdasarkan kondisi tertentu.
+        
+        // Struktur IF-Else
+        if (kondisi) 
+        {
+            // Blok kode ini dieksekusi jika kondisi bernilai true
+        } 
+        else 
+        {
+            // Blok kode ini dieksekusi jika kondisi bernilai false
+        }
+        
+        // Struktur IF- Else If - Else
+        if (kondisi1) 
+        {
+            // Blok kode ini dieksekusi jika kondisi1 bernilai true
+        } 
+        else if (kondisi2) 
+        {
+            // Blok kode ini dieksekusi jika kondisi1 false dan kondisi2 true
+        } 
+        else 
+        {
+            // Blok kode ini dieksekusi jika kondisi1 dan kondisi2 false
+        }
+        
+        // Contoh
+        // Deklarasi variabel
+        int nilai = 75;
+
+        // Menggunakan if-else untuk memeriksa kondisi
+        // Apabila nilai dengan variabel lebih dari sama dengan 80 maka mencetak A
+        if (nilai >= 80)
+        {
+            Console.WriteLine("Nilai Anda A");
+        }
+        
+        // Apabila nilai dengan variabel diantara 60 hingga 80 maka mencetak nilai B
+        else if (nilai >= 60 && nilai < 80)
+        {
+            Console.WriteLine("Nilai Anda B");
+        }
+        
+        // Apabila tidak masuk kriteria diatas maka ia akan beralih ke else
+        else
+        {
+            Console.WriteLine("Nilai Anda C");
+        }
+        
+        // ========================== 11 - Switch  ========================
+        // switch dalam pemrograman digunakan untuk membuat keputusan berdasarkan nilai dari sebuah variabel
+        
+        // Deklarasi variabel
+        int hari = 3;
+
+        // Menggunakan switch untuk menentukan hari
+        switch (hari) 
+        {
+            case 1:
+                Console.WriteLine("Hari ini adalah Senin");
+                break;
+            case 2:
+                Console.WriteLine("Hari ini adalah Selasa");
+                break;
+            case 3:
+                Console.WriteLine("Hari ini adalah Rabu");
+                break;
+            case 4:
+                Console.WriteLine("Hari ini adalah Kamis");
+                break;
+            case 5:
+                Console.WriteLine("Hari ini adalah Jumat");
+                break;
+            case 6:
+                Console.WriteLine("Hari ini adalah Sabtu");
+                break;
+            case 7:
+                Console.WriteLine("Hari ini adalah Minggu");
+                break;
+            default:
+                Console.WriteLine("Hari tidak valid");
+                break;
+        
+        // Jika menginput 3 maka ia mencetak "Hari ini adalah Rabu"
+        
+        // ========================== 12 - Loop  ========================
+        // Loop dalam pemrograman digunakan untuk menjalankan sekelompok perintah secara berulang kali selama kondisi tertentu terpenuhi.
+        
+        // Contoh 
+        for (int i = 0; i < 5; i++)
+        {
+            Console.WriteLine("Iterasi ke-" + i);
+        }
+        // Perulangan ini dilakukan sebanyak 5 kali dimulai dari index = 0
+        
+        // ========================== 13 - Array  ========================
+        // Array adalah struktur data yang menyimpan sekumpulan elemen dengan tipe data yang sama di dalam memori yang bersebelahan. Setiap elemen dalam array diakses menggunakan indeks, yang biasanya dimulai dari 0. Array memungkinkan kita untuk menyimpan dan mengelola data yang serupa secara efisien.
+        
+        // Deklarasi dan inisialisasi array
+        int[] angka = { 10, 20, 30, 40, 50 };
+
+        // Mengakses dan menampilkan elemen array
+        Console.WriteLine("Elemen pertama: " + angka[0]);  // Output: 10
+        Console.WriteLine("Elemen kedua: " + angka[1]);    // Output: 20
+        Console.WriteLine("Elemen ketiga: " + angka[2]);   // Output: 30
+
+        // Mengubah nilai elemen array
+        angka[2] = 100;
+        Console.WriteLine("Elemen ketiga setelah diubah: " + angka[2]);  // Output: 100
+
+        // Menggunakan loop untuk menampilkan semua elemen array
+        Console.WriteLine("Semua elemen dalam array:");
+        for (int i = 0; i < angka.Length; i++)
+        {
+            Console.WriteLine(angka[i]);
+        }
+        
+        
+    }
+  }
+}
